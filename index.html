@@ -3,32 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juice UI Design</title>
+    <title>Game and Grind Café</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="logo-header">
-        <img class="logo" src="/img/Coffee.svg" alt="logo" />
-      </div>
-      <div class="nav">
-        <ul id="nav-items">
-          <li class="active">home</li>
-          <li>about</li>
-          <li>services</li>
-          <li>contact</li>
+      <nav class="navbar">
+        <div class="logo">
+          <img class="logo-cafe" src="/img/Coffee.svg" alt="Coffee Shop Logo" />
+        </div>
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/Menu.html">Menu</a></li>
+          <li><a href="/pages/About-Us.html">About</a></li>
+          <li><a href="/pages/Contact.html">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
-    <div class="hero-section">
-      <div class="hero-content">
-        <h1>get fresh <span>coffee</span> everyday</h1>
-        <p>Brewed to Perfection</p>
-        <button>Details</button>
-      </div>
-      <div class="hero-img">
-        <img src="img/coffee.png" alt="coffee" />
-      </div>
-    </div>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Game and Grind Café</h1>
+          <p>
+            Your ultimate destination for artisanal coffee and retro arcade fun
+          </p>
+          <button
+            onclick="window.location.href='/pages/Menu.html'"
+            class="cta-button"
+          >
+            Explore Our Menu
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav class="footer-nav">
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/Menu.html">Menu</a></li>
+          <li><a href="/pages/About-Us.html">About</a></li>
+          <li><a href="/pages/Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>
+        &copy; 2025 Game and Grind Café | 123 Main Street, West Columbia, SC |
+        (123) 456-7890
+      </p>
+      <ul class="social-media">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
