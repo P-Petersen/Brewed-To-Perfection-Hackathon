@@ -1,17 +1,22 @@
+/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
 }
-/* This rule resets the margin and padding for all elements to ensure consistent starting points. */
+
+/* Body Styles */
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-/* Sets the font family for the entire document to Arial, with sans-serif as a fallback. */
 
-.navbar {
+/*Navbar and Footer Styles*/
+
+.navbar,
+footer {
   display: flex;
-  justify-content: space-between; /* Space out the logo and nav items */
+  justify-content: space-between;
   align-items: center;
   background: rgb(255, 127, 39);
   background-blend-mode: darken;
@@ -19,28 +24,27 @@ body {
   color: white;
   padding: 10px 20px;
 }
-/* Styles the navigation bar with flexbox layout, background color, and padding. */
+
+/* Logo Styles */
 
 .logo img {
-  max-height: 100px; /* Adjust the size of the logo if needed */
+  max-height: 100px;
 }
-/* Sets the maximum height for the logo image. */
 
+/* Navigation List */
 .nav-list {
   display: flex;
   list-style: none;
 }
-/* Applies flexbox layout to the navigation list and removes bullet points. */
 
+/* Navigation List Items */
 .nav-list li {
   margin-right: 20px;
 }
-/* Adds right margin to each list item. */
 
 .nav-list li:last-child {
   margin-right: 0;
 }
-/* Removes right margin from the last list item. */
 
 .nav-list li a {
   text-decoration: none;
@@ -48,13 +52,12 @@ body {
   font-size: 18px;
   transition: color 0.3s ease-in-out;
 }
-/* Styles the navigation links with no underline, white color, font size, and transition effect. */
 
 .nav-list li a:hover {
-  color: #ffd700; /* Change the color on hover */
+  color: #ffd700;
 }
-/* Changes the color of navigation links on hover. */
 
+/* Hero Section */
 .hero {
   position: relative;
   text-align: center;
@@ -62,10 +65,9 @@ body {
   background: url("/img/hero-coffee-image.png") no-repeat center center;
   background-size: cover;
   padding: 100px 20px;
-  height: calc(100vh - 60px); /* Adjust the height to cover the view */
-  z-index: 0; /* Ensures the hero section stays behind the content */
+  height: calc(100vh - 60px);
+  z-index: 0;
 }
-/* Styles the hero section with a background image, center-aligned text, padding, and full viewport height. */
 
 .hero::before {
   content: "";
@@ -74,21 +76,21 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Adds a dark overlay effect */
-  z-index: 1; /* Ensures the overlay effect is above the hero section */
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
-/* Adds a dark overlay effect to the hero section for better visual quality. */
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensures the content is above the overlay */
+  z-index: 2;
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
-/* Styles the hero content with a semi-transparent background, padding, and rounded corners. */
+
+/* CTA Button */
 
 .cta-button {
   background-color: rgb(255, 127, 39);
@@ -100,86 +102,84 @@ body {
   transition: background-color 0.3s ease-in-out;
   border-radius: 5px;
 }
-/* Styles the call-to-action button with background color, text color, padding, and transition effect. */
 
 .cta-button:hover {
-  background-color: #ffd700; /* Change the color on hover */
-}
-/* Changes the background color of the button on hover. */
-
-/* Footer Styles */
-
-footer {
-  background: rgb(255, 127, 39);
-  padding: 20px;
-  color: white;
+  background-color: #ffd700;
 }
 
-.footer-nav {
+/* Footer Container and Sections */
+.footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h2,
+.footer-section h3 {
   margin-bottom: 10px;
 }
 
-.footer-list {
-  display: flex;
-  list-style: none;
-  font-size: 18px;
+.footer-section p,
+.footer-section ul {
+  margin: 5px 0;
 }
 
-.footer-list li {
-  margin-right: 20px;
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.footer-list li:last-child {
-  margin-right: 0;
+.footer-section ul li {
+  margin: 5px 0;
 }
 
-.footer-list li a {
-  text-decoration: none;
+.footer-section ul li a {
   color: white;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-list li a:hover {
-  color: #ffd700; /* Change the color on hover */
-}
-
-footer p {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.social-media {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 10px 0;
-}
-
-.social-media li {
-  margin-right: 20px;
-}
-
-.social-media li:last-child {
-  margin-right: 0;
-}
-
-.social-media li a {
   text-decoration: none;
-  color: white;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Add background color to ensure readability */
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.social-media li a:hover {
-  background: #ffd700; /* Change the background color on hover */
-  color: black; /* Change the text color on hover */
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-info h4,
+.footer-links h4 {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
